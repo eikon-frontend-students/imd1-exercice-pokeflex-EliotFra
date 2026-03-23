@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PokéFlex - Exercice Flexbox</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!--
@@ -43,7 +49,6 @@
             />
             <button type="submit" class="search-button">Chercher</button>
           </div>
-          <p class="search-helper">Ex: Gruikui, Pikachu, Salamèche</p>
         </form>
 
         <!-- Message d'erreur (caché par défaut avec l'attribut hidden) -->
@@ -78,58 +83,62 @@
         </div>
 
         <!-- Informations principales -->
-        <div class="card-info card-info-flex">
-          <h2 class="card-name" data-field="name">Nom du Pokémon</h2>
-          <p class="card-id">
-            <span class="card-id-label">N°</span>
-            <span class="card-id-value" data-field="id">000</span>
-          </p>
-          <p class="card-generation">
-            <span class="card-generation-label">Génération:</span>
-            <span class="card-generation-value" data-field="generation">1</span>
-          </p>
-        </div>
+        <div class="card-infos">
+          <div class="card-info card-info-flex">
+            <h2 class="card-name" data-field="name">Nom du Pokémon</h2>
+            <p class="card-id">
+              <span class="card-id-label">N°</span>
+              <span class="card-id-value" data-field="id">000</span>
+            </p>
+            <p class="card-generation">
+              <span class="card-generation-label">Génération:</span>
+              <span class="card-generation-value" data-field="generation"
+                >1</span
+              >
+            </p>
+          </div>
 
-        <!-- Types (badges) -->
-        <div class="card-types card-types-flex" data-field="types-container">
-          <!--
+          <!-- Types (badges) -->
+          <div class="card-types card-types-flex" data-field="types-container">
+            <!--
           Exemple avec 2 badges de type.
           JavaScript adaptera le nombre selon le Pokémon.
         -->
-          <span class="type-badge" data-type="type1">Type 1</span>
-          <span class="type-badge" data-type="type2">Type 2</span>
-        </div>
+            <span class="type-badge" data-type="type1">Type 1</span>
+            <span class="type-badge" data-type="type2">Type 2</span>
+          </div>
 
-        <!-- Statistiques -->
-        <div class="card-stats card-stats-flex">
-          <div class="stat-row stat-row-flex">
-            <span class="stat-label">PV</span>
-            <span class="stat-value" data-stat="hp">0</span>
-          </div>
-          <div class="stat-row stat-row-flex">
-            <span class="stat-label">Attaque</span>
-            <span class="stat-value" data-stat="attack">0</span>
-          </div>
-          <div class="stat-row stat-row-flex">
-            <span class="stat-label">Défense</span>
-            <span class="stat-value" data-stat="defense">0</span>
-          </div>
-          <div class="stat-row stat-row-flex">
-            <span class="stat-label">Attaque Spé.</span>
-            <span class="stat-value" data-stat="special-attack">0</span>
-          </div>
-          <div class="stat-row stat-row-flex">
-            <span class="stat-label">Défense Spé.</span>
-            <span class="stat-value" data-stat="special-defense">0</span>
-          </div>
-          <div class="stat-row stat-row-flex">
-            <span class="stat-label">Vitesse</span>
-            <span class="stat-value" data-stat="speed">0</span>
+          <!-- Statistiques -->
+          <div class="card-stats card-stats-flex">
+            <div class="stat-row stat-row-flex">
+              <span class="stat-label">PV</span>
+              <span class="stat-value" data-stat="hp">0</span>
+            </div>
+            <div class="stat-row stat-row-flex">
+              <span class="stat-label">Attaque</span>
+              <span class="stat-value" data-stat="attack">0</span>
+            </div>
+            <div class="stat-row stat-row-flex">
+              <span class="stat-label">Défense</span>
+              <span class="stat-value" data-stat="defense">0</span>
+            </div>
+            <div class="stat-row stat-row-flex">
+              <span class="stat-label">Attaque Spé.</span>
+              <span class="stat-value" data-stat="special-attack">0</span>
+            </div>
+            <div class="stat-row stat-row-flex">
+              <span class="stat-label">Défense Spé.</span>
+              <span class="stat-value" data-stat="special-defense">0</span>
+            </div>
+            <div class="stat-row stat-row-flex">
+              <span class="stat-label">Vitesse</span>
+              <span class="stat-value" data-stat="speed">0</span>
+            </div>
           </div>
         </div>
       </article>
     </template>
-
+    <script src="pokebuildapi-pokeapi-shim.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

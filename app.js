@@ -19,7 +19,7 @@
   // Pokémon affiché par défaut au chargement de la page.
   // Change ce nom si tu veux un autre Pokémon de départ.
   // Mets null ou '' pour ne pas charger de Pokémon par défaut.
-  const DEFAULT_POKEMON = "Gruikui";
+  const DEFAULT_POKEMON = "salamèche";
   // =====================================================
 
   // URL de base de l'API Pokémon
@@ -218,7 +218,15 @@
    * Crée une carte Pokémon et l'ajoute au conteneur
    * @param {Object} pokemon - Les données du Pokémon
    */
+  // ...existing code...
+  /**
+   * Crée une carte Pokémon et l'ajoute au conteneur
+   * @param {Object} pokemon - Les données du Pokémon
+   */
   function createPokemonCard(pokemon) {
+    // Remplace les cartes existantes par la nouvelle carte (au lieu d'ajouter)
+    cardsContainer.innerHTML = "";
+
     // Clone le template
     const cardClone = cardTemplate.content.cloneNode(true);
     const card = cardClone.querySelector(".card");
@@ -263,6 +271,7 @@
 
     // Types
     const typesContainer = card.querySelector('[data-field="types-container"]');
+    const cardContainer = card.querySelector(".card-infos");
     if (typesContainer) {
       // Récupère les types depuis apiTypes ou types
       const types = extractTypes(pokemon);
@@ -276,6 +285,8 @@
         badge.className = "type-badge";
         badge.textContent = typeName;
         typesContainer.appendChild(badge);
+
+        cardContainer.classList.add("card-info-" + typeName.toLowerCase());
       });
     }
 
@@ -303,12 +314,7 @@
     // Ajoute la carte au conteneur
     cardsContainer.appendChild(card);
   }
-
-  /**
-   * Extrait les noms des types depuis les données du Pokémon
-   * @param {Object} pokemon - Les données du Pokémon
-   * @returns {string[]} Un tableau des noms de types
-   */
+  //
   function extractTypes(pokemon) {
     // Essaie apiTypes d'abord (structure: [{name: "Feu", image: "..."}])
     if (pokemon.apiTypes && Array.isArray(pokemon.apiTypes)) {

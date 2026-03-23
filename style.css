@@ -29,3 +29,225 @@
  * Bon courage ! 🎨
  * =====================================================
  */
+body {
+  font-family: montserrat, sans;
+  background-image: url(background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 130%;
+}
+.search-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+}
+.card-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 100px;
+  margin: 50px;
+}
+
+.card-infos {
+  width: 300px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  background-color: rgb(231, 231, 231);
+  box-shadow: 29px 29px 58px #000000;
+}
+
+.card-info-flex {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.card-name {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.card-generation {
+  font-size: 0.85rem;
+}
+
+.card-types-flex {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.type-badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+  background-color: #000000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-stats-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stat-row-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.stat-row-flex:hover {
+  background-color: #000000;
+  transform: scale(1.02);
+}
+
+.stat-row-flex:hover .stat-label {
+  color: whitesmoke;
+}
+
+.stat-row-flex:hover .stat-value {
+  color: whitesmoke;
+}
+
+.stat-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.card-info-feu {
+  background-color: #d53a32;
+}
+.card-info-eau {
+  background-color: #3e82e8;
+}
+.card-info-plante {
+  background-color: #5b9f3b;
+}
+.card-info-électrik {
+  background-color: #f2c243;
+}
+.card-info-glace {
+  background-color: #6ed6fb;
+}
+.card-info-combat {
+  background-color: #f08733;
+}
+.card-info-poison {
+  background-color: #8849c5;
+}
+.card-info-sol {
+  background-color: #8a5328;
+}
+.card-info-vol {
+  background-color: #8dbaeb;
+}
+.card-info-psy {
+  background-color: #de4f7a;
+  color: white;
+}
+.card-info-insecte {
+  background-color: #96a136;
+  color: #000000;
+}
+.card-info-roche {
+  background-color: #b0aa87;
+  color: #000000;
+}
+.card-info-spectre {
+  background-color: #6a436e;
+  color: #ffffff;
+}
+.card-info-dragon {
+  background-color: #5064da;
+  color: white;
+}
+.card-info-acier {
+  background-color: #6fa1b7;
+  color: #000000;
+}
+.card-info-fée {
+  background-color: #e07be9;
+  color: #000000;
+}
+.card-info-normal {
+  background-color: #a1a3a1;
+  color: #000000;
+}
+.card-info-ténèbres {
+  background-color: #4d403d;
+  color: rgb(255, 255, 255);
+}
+
+.search-label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.search-input-group {
+  display: flex;
+  gap: 0;
+  border-radius: 30px;
+  overflow: hidden;
+  border: 2px solid #000000;
+}
+
+.search-flex {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: white;
+}
+
+.search-button {
+  padding: 12px 25px;
+  background-color: #000000;
+  color: white;
+  font-weight: bold;
+}
+
+.search-button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.error-message {
+  margin-top: 15px;
+  color: #000000;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-align: center;
+  border-left: 4px solid #000000;
+}
+
+.main-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
